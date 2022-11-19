@@ -12,8 +12,8 @@
 - kubectl get all # will display 
 
 # Working with Multi Nodes (Minikube) (Profile) Default Docker Driver and Runtime with Docker
-- minikube start --nodes 2 -p multinode-demo # will create additional node with name called 'multinode-demo1'
-- \#If it throws error then use on screen instruction : minikube start --nodes 2 -p multinode-demo --extra-config=kubelet.cgroup-driver=systemd 
+- minikube start -p multinode-demo --nodes 3 # will create additional node with name called 'multinode-demo'
+- \#If it throws error then use on screen instruction : minikube start -p multinode-demo --nodes 3 --extra-config=kubelet.cgroup-driver=systemd 
 - minikube profile list # get list of all the profiles
 - minikube profile # Get the Current Profile Name
 - minikube profile minikube # switch to different profile name, example minikube is the default profile name
@@ -24,4 +24,5 @@
 - minikube start --vm-driver=virtualbox -p dev # Will Create Virtual Machine Called dev
 - minikube start --vm-driver=virtualbox -p test # Will Create Virtual Machine Called test
 - minikube start --vm-driver=virtualbox -p prod # Will Create Virtual Machine Called prod
+- minikube start --vm-driver=virtualbox -p prod --nodes 3 # Create prodcluster with 3 Nodes 
 - minikube profile list # get list of all the profiles
