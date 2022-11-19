@@ -4,14 +4,24 @@
   - [choco # Verify the Installation](https://user-images.githubusercontent.com/111234771/202818467-22a26a41-ab84-4e91-8b5b-441c172b4479.png)
     - choco install minikube
 
-# Starting Minikube Master Node
+# Starting Minikube Master Node using Default Docker Driver and Runtime with Docker
 - minikube status # Get the Status of the Minikube Installed
 - minikube start # It will download and install Minikube
 - kubectl get nodes # Get the List of Running Nodes
 - kubectl get pods # Get the list of running PODS
 - kubectl get all # will display 
 
-# Adding Minikube with Multi Nodes
+# Working with Multi Nodes (Minikube) (Profile) Default Docker Driver and Runtime with Docker
 - minikube start --nodes 2 -p multinode-demo # will create additional node with name called 'multinode-demo1'
 - \#If it throws error then use on screen instruction : minikube start --nodes 2 -p multinode-demo --extra-config=kubelet.cgroup-driver=systemd 
-- 
+- minikube profile list # get list of all the profiles
+- minikube profile # Get the Current Profile Name
+- minikube profile minikube # switch to different profile name, example minikube is the default profile name
+- minikube status # Get the Status of the Minikube Installed
+- minikube delete -p multinode-demo # Deleting Profile called multinode-demo
+
+# Creating Multiple Clusters using Virtuam Machine Driver and Runtime with Docker
+- minikube start --vm-driver=virtualbox -p dev # Will Create Virtual Machine Called dev
+- minikube start --vm-driver=virtualbox -p test # Will Create Virtual Machine Called test
+- minikube start --vm-driver=virtualbox -p prod # Will Create Virtual Machine Called prod
+- minikube profile list # get list of all the profiles
