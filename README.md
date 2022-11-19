@@ -28,3 +28,8 @@
 - minikube start --vm-driver=virtualbox -p prod # Will Create Virtual Machine Called prod
 - minikube start --vm-driver=virtualbox -p prod --nodes 3 # Create prodcluster with 3 Nodes 
 - minikube profile list # get list of all the profiles
+
+# Creating 
+```
+- kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agnhost:2.39 -- /agnhost netexec --http-port=8080
+```
