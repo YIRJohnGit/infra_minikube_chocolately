@@ -20,7 +20,7 @@
 - minikube status # Get the Status of the Minikube Installed
 - minikube delete -p multinode-demo # Deleting Profile called multinode-demo
 
-# Creating Multiple Clusters using Virtuam Machine Driver and Runtime with Docker
+# Creating Multiple Clusters using Virtual Machine Driver and Runtime with Docker
 - minikube start --vm-driver=virtualbox -p dev # Will Create Virtual Machine Called dev
 - minikube start --vm-driver=virtualbox -p test # Will Create Virtual Machine Called test
 - minikube start --vm-driver=virtualbox -p prod # Will Create Virtual Machine Called prod
