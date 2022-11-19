@@ -11,13 +11,15 @@
 - kubectl get pods # Get the list of running PODS
 - kubectl get all # will display 
 
-# Working with Multi Nodes (Minikube) (Profile) Default Docker Driver and Runtime with Docker
-- minikube start -p multinode-demo --nodes 3 # will create additional node with name called 'multinode-demo'
+# Working with Multi Nodes (Minikube) (Profile / Cluster) Default Docker Driver and Runtime with Docker
+- minikube start -p multinode-demo --nodes 3 # Creating 3 Nodes Cluster name called 'multinode-demo' 1 Master + 2 Worker
 - \#If it throws error then use on screen instruction : minikube start -p multinode-demo --nodes 3 --extra-config=kubelet.cgroup-driver=systemd 
 - minikube profile list # get list of all the profiles
+- ![image](https://user-images.githubusercontent.com/111234771/202845310-8fb236f9-27a0-400c-a12b-3d8f07185dfd.png)
 - minikube profile # Get the Current Profile Name
 - minikube profile minikube # switch to different profile name, example minikube is the default profile name
 - minikube status # Get the Status of the Minikube Installed
+- ![image](https://user-images.githubusercontent.com/111234771/202845359-4680966d-3636-41d1-8f11-2ae6da6a081e.png)
 - minikube delete -p multinode-demo # Deleting Profile called multinode-demo
 
 # Creating Multiple Clusters using Virtual Machine Driver and Runtime with Docker
